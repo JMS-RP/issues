@@ -1,0 +1,58 @@
+name: Suggestion
+description: Suggest a feature, improvement, usability change, or gameplay adjustment.
+title: "[Suggestion] "
+labels:
+  - "type: suggestion"
+  - "status: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggestions are reviewed by the JMS RP team but are not guarantees of implementation. Please explain the underlying problem as well as the proposed solution.
+  - type: input
+    id: area
+    attributes:
+      label: Script or affected area
+      placeholder: Police / garages / phone / radio / loading screen
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current problem or limitation
+      description: What is difficult, unclear, missing, or not working well today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the feature or behaviour you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Expected benefit
+      description: Explain how this improves roleplay, usability, fairness, performance, or reliability.
+    validations:
+      required: true
+  - type: textarea
+    id: edge_cases
+    attributes:
+      label: Edge cases or alternatives
+      description: Include affected jobs, permissions, multiplayer behaviour, persistence, or alternative approaches if relevant.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add screenshots, examples, comparisons, or links where useful.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched for duplicate suggestions.
+          required: true
+        - label: I removed sensitive information.
+          required: true
