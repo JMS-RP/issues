@@ -1,0 +1,36 @@
+name: Question or help
+description: Ask a public question about JMS RP functionality or documentation.
+title: "[Question] "
+labels:
+  - "type: question"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use Discord for account-specific support or information that should not be public.
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      placeholder: Which script, job, item, or system is this about?
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: What have you already tried?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the README and existing issues.
+          required: true
+        - label: I removed sensitive information.
+          required: true
