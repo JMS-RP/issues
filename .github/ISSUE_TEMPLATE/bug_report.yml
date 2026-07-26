@@ -1,0 +1,78 @@
+name: Bug report
+description: Report broken, missing, or incorrect functionality.
+title: "[Bug] "
+labels:
+  - "type: bug"
+  - "status: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. Do not include passwords, tokens, private URLs, player personal information, or actionable security exploit details.
+  - type: input
+    id: script
+    attributes:
+      label: Script or affected area
+      description: Which resource, system, job, UI, command, item, or feature is affected?
+      placeholder: jmsrp-garages / public vehicle retrieval
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Give numbered steps that another person can follow.
+      placeholder: |
+        1. Go to...
+        2. Open...
+        3. Select...
+        4. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Build and environment
+      description: Include server type, resource build/branch, player count, job/grade, and relevant dependencies when known.
+      placeholder: Staging / development branch / police grade 3 / two players
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add redacted screenshots, video, F8 output, or server-console output.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched for duplicate issues.
+          required: true
+        - label: I removed sensitive information.
+          required: true
+        - label: This is not a security-sensitive exploit report.
+          required: true
